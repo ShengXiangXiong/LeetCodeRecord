@@ -1,0 +1,161 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - longestUpPath",
+            "request": "launch",
+            "mainClass": "longestUpPath",
+            "projectName": "leetcode_6475566d"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - PrevPermOpt1",
+            "request": "launch",
+            "mainClass": "Array.PrevPermOpt1",
+            "projectName": "leetcode_6475566d"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MaxSatisfied",
+            "request": "launch",
+            "mainClass": "Array.MaxSatisfied",
+            "projectName": "leetcode_6475566d"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - HeightChecker",
+            "request": "launch",
+            "mainClass": "sort.HeightChecker",
+            "projectName": "leetcode_6475566d"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - heightChecker",
+            "request": "launch",
+            "mainClass": "sort.heightChecker",
+            "projectName": "leetcode_6475566d"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Knapsack",
+            "request": "launch",
+            "mainClass": "dp.Knapsack",
+            "projectName": "leetcode_6475566d"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - LastStoneWeight",
+            "request": "launch",
+            "mainClass": "dp.LastStoneWeight",
+            "projectName": "leetcode_6475566d"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - LineJudge",
+            "request": "launch",
+            "mainClass": "Geometry.LineJudge",
+            "projectName": "leetcode_6475566d"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - test",
+            "request": "launch",
+            "mainClass": "树.test",
+            "projectName": "leetcode_6475566d"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - LineJudge",
+            "request": "launch",
+            "mainClass": "几何.LineJudge",
+            "projectName": "leetcode_6475566d"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - eauals",
+            "request": "launch",
+            "mainClass": "eauals",
+            "projectName": "leetcode_6475566d"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - stock_2_trans",
+            "request": "launch",
+            "mainClass": "dp.stock_2_trans",
+            "projectName": "leetcode_6475566d"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - lastWordLen",
+            "request": "launch",
+            "mainClass": "lastWordLen",
+            "projectName": "leetcode_6475566d"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - stockProfit",
+            "request": "launch",
+            "mainClass": "Array.stockProfit",
+            "projectName": "leetcode_6475566d"
+        },
+        {
+            "name": "(gdb) c/cpp",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "MIMode": "gdb",
+            "externalConsole": false,
+            "miDebuggerPath": "D:\\Dev-C++\\MinGW64\\bin\\gdb.exe",
+            "preLaunchTask": "g++",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - arrayNesting",
+            "request": "launch",
+            "mainClass": "arrayNesting",
+            "projectName": "leetcode_6475566d"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - minSwap",
+            "request": "launch",
+            "mainClass": "dp.minSwap",
+            "projectName": "leetcode_6475566d"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - minSwap",
+            "request": "launch",
+            "mainClass": "动态规划.minSwap",
+            "projectName": "leetcode_6475566d"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - minSwap",
+            "request": "launch",
+            "mainClass": "minSwap",
+            "projectName": "leetcode_6475566d"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        }
+    ]
+}
