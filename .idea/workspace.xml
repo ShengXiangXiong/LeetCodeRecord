@@ -10,7 +10,30 @@
     <bookmark url="file://$PROJECT_DIR$/subject/src/ruleSimulation/ZCharChange.java" line="68" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7e4c73b-1ce6-470b-8f02-6ace9593628c" name="Default Changelist" comment="" />
+    <list default="true" id="e7e4c73b-1ce6-470b-8f02-6ace9593628c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Array/MaxSatisfied.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Array/PrevPermOpt1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Array/RearrangeBarcodes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Array/arrayPartition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Array/stockProfit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Geometry/LineJudge.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tree/quadTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/arrayNesting.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dp/Knapsack.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dp/LastStoneWeight.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dp/dp心得.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dp/minSwap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dp/minSwap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dp/stockProfit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dp/stock_2_trans.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java语法积累.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lastWordLen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/longestUpPath.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sort/HeightChecker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/算法编程题心得.md" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/../nowcoder/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,11 +47,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/subject/src/ruleSimulation/ZCharChange.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="16" column="2" lean-forward="true" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+            <state relative-caret-position="123">
+              <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1429">
+              <caret line="3" column="5" lean-forward="true" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -41,6 +73,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -56,6 +91,7 @@
         <option value="$PROJECT_DIR$/subject/src/search/dfs/Point24.java" />
         <option value="$PROJECT_DIR$/subject/src/ZCharChange.java" />
         <option value="$PROJECT_DIR$/subject/src/ruleSimulation/ZCharChange.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -83,7 +119,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -102,21 +137,11 @@
               <item name="leetCode" type="b2602c69:ProjectViewProjectNode" />
               <item name="subject" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="leetCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="subject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="leetCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="subject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="array" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -126,6 +151,7 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../nowcoder/pom.xml" />
@@ -134,7 +160,7 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.245" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -299,11 +325,15 @@
       <workItem from="1562725081331" duration="16885000" />
       <workItem from="1562847318102" duration="1819000" />
       <workItem from="1562897516060" duration="3794000" />
+      <workItem from="1563871298233" duration="557000" />
+      <workItem from="1563871998476" duration="479000" />
+      <workItem from="1563872493800" duration="181000" />
+      <workItem from="1563872690547" duration="79000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66939000" />
+    <option name="totallyTimeSpent" value="67918000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -316,9 +346,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.69339114" visible="true" weight="0.114072494" />
-      <window_info id="Structure" order="1" sideWeight="0.3066089" side_tool="true" visible="true" weight="0.114072494" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.686551" visible="true" weight="0.118336886" />
+      <window_info id="Structure" order="1" sideWeight="0.31344903" side_tool="true" visible="true" weight="0.118336886" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -326,17 +357,17 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.42578548" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.45070422" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.29718006" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32936078" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.9152452" weight="0.32827735" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.084754795" side_tool="true" weight="0.32827735" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.30010834" />
       <window_info anchor="bottom" id="Spring" order="13" weight="0.32936078" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.32936078" />
@@ -386,6 +417,20 @@
                 </list>
               </option>
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
           </value>
         </entry>
       </map>
@@ -628,10 +673,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/subject/src/longestUpPath.java" />
     <entry file="file://$PROJECT_DIR$/subject/src/ruleSimulation/ZCharChange.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="16" column="2" lean-forward="true" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+        <state relative-caret-position="123">
+          <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1429">
+          <caret line="3" column="5" lean-forward="true" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
         </state>
       </provider>
     </entry>
