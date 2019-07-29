@@ -11,5 +11,8 @@
 3. 遍历ArrayList时，又删除了其中的元素
     当通过for循环遍历时，若删除了某些元素，则会造成游标超出界限错误
 
+4.调用排序的sort接口
+对于数组类，使用Arrays.sort()
+对于集合类，使用Collections.sort()
 
 
