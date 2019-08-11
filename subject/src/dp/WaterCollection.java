@@ -16,48 +16,37 @@ import java.util.*;
  * 这里可以采取一个Treeset作为前面柱子pos的容器，这样可以快速二分查找，定位两边离得最近的柱子位置。O（nlogn）
  */
 
-class Pillar{
-    public int pos;
-    public int height;
-    Pillar(int pos,int height){
-        this.pos = pos;
-        this.height = height;
-    }
-}
-
 public class WaterCollection {
+
+
     public static int height(int[] nums){
-        Pillar[] pillars = new Pillar[nums.length];
-        for (int i = 0; i < nums.length; i++) {
-            pillars[i]= new Pillar(i,nums[i]);
+        if(nums.length<2){
+            return 0;
         }
-        Arrays.sort(pillars,Comparator.comparing((Pillar p)->-p.height));
-//        Set<List<Integer>> mem = new HashSet<>();
+        int[][] pillars = new int[nums.length][2];
+        for (int i = 0; i < nums.length; i++) {
+            pillars[i][0]=i;
+            pillars[i][1]=nums[i];
+        }
+        Arrays.sort(pillars, (o1, o2) -> o2[1]-o1[1]);
         int res = 0;
         TreeSet<Integer> hs = new TreeSet<>();
-        hs.add(pillars[0].pos);
+        hs.add(pillars[0][0]);
         for (int i = 1; i < nums.length; i++) {
-            int h = pillars[i].height;
-            int pos = pillars[i].pos;
+            int h = pillars[i][1];
+            int pos = pillars[i][0];
             hs.add(pos);
             Integer right = hs.higher(pos);
             Integer left = hs.lower(pos);
-//            List<Integer> tmp = new ArrayList<>();
-//            tmp.add(left);
-//            tmp.add(right);
-//            if(mem.contains(tmp)){
-//                continue;
-//            }
             if(right!=null && left!=null){
                 res+=(right-left-1)*(Math.min(nums[right],nums[left])-h);
-//                mem.add(tmp);
             }
         }
         return res;
     }
 
     public static void main(String[] args) {
-        int[] nums = {1,1,0,2,1,0,1,3,2,1,2,1};
+        int[] nums = {0,1,0,2,1,0,1,3,2,1,2,1};
 
         System.out.println(height(nums));
     }
