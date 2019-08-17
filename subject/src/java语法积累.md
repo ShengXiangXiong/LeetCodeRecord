@@ -41,8 +41,10 @@
 
 所以对于这种需要数组的key，可以转换为string来做key
 
-8. 快速转换为String类型
-通过 String str = String.valueOf() 进行转换
+8. String相关方法
+通过 String str = String.valueOf() 进行转换，可以快速将其他类型转换为String类型
+子串查找 str.indexof(subStr,fromIndex)，要想查到子串的所有位置，则需使fromIndex从0到str.length()-subStr.length()进行+1循环
+
 
 9. 多字段排序实现
 方法一：使用Comparator.comparing().thenComparing()链式比较语法
@@ -61,3 +63,6 @@ floor(tar)——返回小于等于tar的最大数
 所以当我们存的是Integer类型时，我们使用 int res = t.higher(tar)时，其实际上自动进行了拆箱赋值，
 但是如果没有找到对应的key，则返回null，而此时自动拆箱肯定不行，会报null错误，所以最保险的方式不进行自动拆箱
 而是使用Integer res = t.higher(tar)，这样在判断res是否为空后，在拆箱成int。
+
+11.使用Map的put方法时，当key不存在时可以使用map.put(words[i], map.getOrDefault(words[i], 0) + 1)这种方式赋初值，不用
+在写成if-else分支形式了。

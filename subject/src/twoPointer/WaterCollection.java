@@ -1,4 +1,4 @@
-package stack;
+package twoPointer;
 
 import java.util.Arrays;
 import java.util.Stack;
