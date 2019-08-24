@@ -52,7 +52,7 @@ public class Atoi {
 
     public static int atoi2(String str) {
         str = str.trim();
-        if (str == null || str.length() == 0) return 0;
+        if (str.length() == 0) return 0;
 
         // + - 号
         char firstChar = str.charAt(0);

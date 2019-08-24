@@ -10,12 +10,11 @@ public class matrixTrans {
         str.deleteCharAt(str.length()-1);
         String[] strs = str.toString().split("],");
         for (String str1 : strs) {
-            char[] c = str1.toCharArray();
+            String[] ss = str1.split("\\D");
             ArrayList<Integer> ls = new ArrayList<>();
-            for (char c1 : c) {
-                int num = c1-'0';
-                if(num>=0&&num<=9){
-                    ls.add(num);
+            for (String s1 : ss) {
+                if (s1.length() > 0) {
+                    ls.add(Integer.valueOf(s1));
                 }
             }
             nums.add(ls);
