@@ -1,4 +1,4 @@
-package dp;
+package dp.matrix;
 
 /**
  * Created by Xursan on 2019/8/25.
@@ -24,6 +24,7 @@ public class UniquePaths {
      * dp[m][n] = dp[m-1][n]+dp[m][n-1]，接下来就是找出初始阶段的状态，结合图发现初始状态其实就是dp[m][1]=1和dp[1][n]=1。
      * 然后通过自底向上的地推形式进行编程即可。
      *
+     * 对于矩阵类dp问题，可以直接把边界作为初始状态，不放在状态转移中，这样就可以不用考虑边界情况，思路更清晰。
      * @param m
      * @param n
      * @return
@@ -33,12 +34,14 @@ public class UniquePaths {
             return 0;
         }
         int[][] dp = new int[m][n];
+        //边界初始化
         for (int i = 0; i < m; i++) {
             dp[i][0] = 1;
         }
         for (int i = 0; i < n; i++) {
             dp[0][i] = 1;
         }
+        //状态转移
         for (int i = 1; i < m; i++) {
             for (int j = 1; j < n; j++) {
                 dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
