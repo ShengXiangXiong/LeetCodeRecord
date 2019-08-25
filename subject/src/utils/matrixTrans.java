@@ -8,7 +8,7 @@ public class matrixTrans {
         StringBuilder str = new StringBuilder(s);
         str.deleteCharAt(0);
         str.deleteCharAt(str.length()-1);
-        String[] strs = str.toString().split("],");
+        String[] strs = str.toString().split("]");
         for (String str1 : strs) {
             String[] ss = str1.split("\\D");
             ArrayList<Integer> ls = new ArrayList<>();
@@ -17,7 +17,9 @@ public class matrixTrans {
                     ls.add(Integer.valueOf(s1));
                 }
             }
-            nums.add(ls);
+            if (ls.size() > 0) {
+                nums.add(ls);
+            }
         }
         int n=nums.size();
         int m=nums.get(0).size();
