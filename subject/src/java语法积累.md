@@ -64,5 +64,7 @@ floor(tar)——返回小于等于tar的最大数
 但是如果没有找到对应的key，则返回null，而此时自动拆箱肯定不行，会报null错误，所以最保险的方式不进行自动拆箱
 而是使用Integer res = t.higher(tar)，这样在判断res是否为空后，在拆箱成int。
 
-11.使用Map的put方法时，当key不存在时可以使用map.put(words[i], map.getOrDefault(words[i], 0) + 1)这种方式赋初值，不用
+11. 使用Map的put方法时，当key不存在时可以使用map.put(words[i], map.getOrDefault(words[i], 0) + 1)这种方式赋初值，不用
 在写成if-else分支形式了。
+
+12. 注意在初始化char数组时，所有值均为'\0'，表示结束符。'\0'!='0'!=' '
