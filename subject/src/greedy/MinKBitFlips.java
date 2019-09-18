@@ -1,4 +1,4 @@
-package array;
+package greedy;
 
 /**
  * Created By ShengXiang.Xiong on 2019/9/18
