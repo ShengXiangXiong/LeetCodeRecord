@@ -1,4 +1,4 @@
-package array;
+package math;
 
 /**
  * Created by Xursan on 2019/9/18.
@@ -86,7 +86,7 @@ public class MinMoves2 {
     }
 
     public static void main(String[] args) {
-        int[] nums = {13, 2, 5, 6, 7, 1, 0};
+        int[] nums = {13, 2, 5, 6, 7, 1, 0, 17, 9, 20, 27, 28, 43, 198};
         MinMoves2 minMoves = new MinMoves2();
         System.out.println(minMoves.minMoves2(nums));
     }

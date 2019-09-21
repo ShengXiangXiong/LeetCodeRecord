@@ -1,4 +1,4 @@
-package array;
+package math;
 
 /**
  * Created by Xursan on 2019/9/15.
