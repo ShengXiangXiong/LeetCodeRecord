@@ -35,6 +35,33 @@ public class matrixTrans {
         }
         return res;
     }
+
+    public static char[][] str2CharArray(String s) {
+        ArrayList<ArrayList<Character>> res = new ArrayList<>();
+        StringBuilder str = new StringBuilder(s);
+        str.deleteCharAt(0);
+        str.deleteCharAt(str.length() - 1);
+        String[] strs = str.toString().split("]");
+        for (String str1 : strs) {
+            String[] ss = str1.split("[^(A-Za-z)]");
+            ArrayList<Character> ls = new ArrayList<>();
+            for (String s1 : ss) {
+                if (s1.length() > 0) {
+                    ls.add(s1.charAt(0));
+                }
+            }
+            if (ls.size() > 0) {
+                res.add(ls);
+            }
+        }
+        char[][] cs = new char[res.size()][res.get(0).size()];
+        for (int i = 0; i < res.size(); i++) {
+            for (int j = 0; j < res.get(0).size(); j++) {
+                cs[i][j] = res.get(i).get(j);
+            }
+        }
+        return cs;
+    }
     public static void main(String[] args) {
         int[][] nums;
         String str = "[[1,0,1,1,0,0,1,0,0,1],[0,1,1,0,1,0,1,0,1,1],[0,0,1,0,1,0,0,1,0,0],[1,0,1,0,1,1,1,1,1,1],[0,1,0,1,1,0,0,0,0,1],[0,0,1,0,1,1,1,0,1,0],[0,1,0,1,0,1,0,0,1,1],[1,0,0,0,1,1,1,1,0,1],[1,1,1,1,1,1,1,0,1,0],[1,1,1,1,0,1,0,0,1,1]]";
@@ -45,5 +72,13 @@ public class matrixTrans {
             }
             System.out.println();
         }
+        String ss = "[[\"a\",\"a\",\"a\"],[\"a\",\"b\",\"b\"],[\"a\",\"b\",\"b\"],[\"b\",\"b\",\"b\"],[\"b\",\"b\",\"b\"],[\"a\",\"a\",\"a\"],[\"b\",\"b\",\"b\"],[\"a\",\"b\",\"b\"],[\"a\",\"a\",\"b\"],[\"a\",\"b\",\"a\"]]\n";
+        for (char[] chars : str2CharArray(ss)) {
+            for (char aChar : chars) {
+                System.out.print(aChar + " ");
+            }
+            System.out.println();
+        }
+
     }
 }
