@@ -88,6 +88,16 @@ public class matrixTrans {
         return cs;
     }
 
+    public static ArrayList<String> str2List(String s) {
+        ArrayList<String> res = new ArrayList<>();
+        String[] strs = s.split("[^(A-Za-z0-9)]");
+        for (String str : strs) {
+            if (str.length() > 0) {
+                res.add(str);
+            }
+        }
+        return res;
+    }
     public static void main(String[] args) {
         int[][] nums;
         String str = "[[1,0,1,1,0,0,1,0,0,1],[0,1,1,0,1,0,1,0,1,1],[0,0,1,0,1,0,0,1,0,0],[1,0,1,0,1,1,1,1,1,1],[0,1,0,1,1,0,0,0,0,1],[0,0,1,0,1,1,1,0,1,0],[0,1,0,1,0,1,0,0,1,1],[1,0,0,0,1,1,1,1,0,1],[1,1,1,1,1,1,1,0,1,0],[1,1,1,1,0,1,0,0,1,1]]";

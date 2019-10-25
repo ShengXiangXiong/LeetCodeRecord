@@ -36,7 +36,6 @@ public class NumIslands {
             }
         }
     }
-
     /**
      * 直接dfs完成即可，由于不存在回溯的情况，不需要重设vis
      *
@@ -61,7 +60,6 @@ public class NumIslands {
         }
         return ans;
     }
-
     public static void main(String[] args) {
         String a = "11110\n" +
                 "11010\n" +
