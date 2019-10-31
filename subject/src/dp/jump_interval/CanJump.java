@@ -1,4 +1,4 @@
-package dp;
+package dp.jump_interval;
 
 /**
  * Created by Xursan on 2019/8/23.
