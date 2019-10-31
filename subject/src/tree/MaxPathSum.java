@@ -48,8 +48,6 @@ public class MaxPathSum {
         ans = Math.max(ans, sum[0]);
         return sum;
     }
-
-
     public static int maxPathSum(TreeNode root) {
         String s = "-10,9,20,null,null,15,-7";
         TreeNode.bstFromPreorder(root, s.split("[, ]"));

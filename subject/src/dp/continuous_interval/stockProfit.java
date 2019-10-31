@@ -1,4 +1,4 @@
-package dp;
+package dp.continuous_interval;
 
 /**
  * stockProfit
