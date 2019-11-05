@@ -1,14 +1,5 @@
 package linkList;
 
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-    }
-}
-
 public class K_ReversedLinkList {
     public static ListNode reverseKGroup(ListNode head, int k) {
         if (k == 1) {
