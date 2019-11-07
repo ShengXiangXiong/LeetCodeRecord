@@ -43,7 +43,7 @@ public class matrixTrans {
 //        str.deleteCharAt(0);
 //        str.deleteCharAt(str.length() - 1);
 //        String[] strs = str.toString().replaceAll("[^(A-Za-z0-9)]"," ").split(" ");
-        String[] strs = str.toString().split("[^(A-Za-z0-9)]");
+        String[] strs = str.toString().split("[]\n]");
         for (String str1 : strs) {
             String[] ss = str1.split("[^(A-Za-z0-9)]");
             ArrayList<Character> ls = new ArrayList<>();
