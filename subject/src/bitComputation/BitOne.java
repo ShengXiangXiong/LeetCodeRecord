@@ -20,6 +20,7 @@ public class BitOne {
     }
 
     public static void main(String[] args) {
+        //0b 表示一个二进制输入
         int n = 0b0;
         System.out.println(hammingWeight(n));
     }
