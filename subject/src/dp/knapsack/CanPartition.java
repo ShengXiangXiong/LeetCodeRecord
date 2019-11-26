@@ -19,6 +19,12 @@ package dp.knapsack;
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
 public class CanPartition {
+    /**
+     * 典型的0-1背包问题，就是查看nums中能否找出填满sum(nums)/2的组合。
+     *
+     * @param nums
+     * @return
+     */
     public static boolean canPartition(int[] nums) {
         int sum = 0;
         for (int num : nums) {
@@ -29,6 +35,8 @@ public class CanPartition {
         }
         int cap = sum / 2;
         int n = nums.length;
+        if (n == 0) {
+            return true;}
         int[][] dp = new int[n][cap + 1];
 
         for (int i = 0; i <= cap; i++) {
@@ -40,7 +48,7 @@ public class CanPartition {
         }
         for (int i = 1; i < n; i++) {
             for (int j = 0; j < cap + 1; j++) {
-                if (i >= 1 && j - nums[i] >= 0) {
+                if (j - nums[i] >= 0) {
                     dp[i][j] = Math.max(dp[i - 1][j - nums[i]] + nums[i], dp[i - 1][j]);
                 } else {
                     dp[i][j] = dp[i - 1][j];
@@ -50,8 +58,54 @@ public class CanPartition {
         return dp[n - 1][cap] == cap;
     }
 
+    /**
+     * 我们再仔细想一下，虽然是0-1背包，但是这里我们并不需要计算最大能装多少，而是在于计算能否装满。
+     * 因此，状态方程需要改一改：dp[i][j]表示前i个物品中能否装满j容量，true or false
+     * 按照0-1背包的特性，dp[i][j]只会受dp[i-1][j]和dp[i-1][j-nums[i]]的影响
+     * 故知道，如果dp[i-1][j]和dp[i-1][j-nums[i]]中只要有一个为true，则必然dp[i][j]也为true了
+     * <p>
+     * 因此状态转移方程为：if(j-nums[i]>=0) => dp[i][j] = dp[i-1][j] || dp[i-1][j-nums[i]]
+     * else => dp[i][j] = dp[i-1][j]
+     * <p>
+     * 进一步空间优化：根据状态方程，我们知道dp[i][...]只会受dp[i-1][...]的影响，因此，我们可以只记录i-1阶段时所有容量下
+     * 的状态，则有if(i-num>=0)   =>   dp[i] = dp[i] || dp[i-num]
+     * else    =>      dp[i] = dp[i]
+     * 另外值得注意的是，空间优化后cap需要从大到小，这样才不会造成 大cap 被 小cap影响。
+     *
+     * @param nums
+     * @return
+     */
+    public static boolean canPartition1(int[] nums) {
+        if (nums == null) {
+            return false;
+        }
+        int n = nums.length;
+        if (n == 0) {
+            return true;
+        }
+        int sum = 0;
+        for (int num : nums) {
+            sum += num;
+        }
+        if (sum % 2 != 0) {
+            return false;
+        }
+        int cap = sum / 2;
+        boolean[] dp = new boolean[cap + 1];
+        //注意这里一定得初始化容量为0时为true，因为后面的容量很可能会依赖于cap为0时的状态
+        dp[0] = true;
+        for (int num : nums) {
+            for (int i = cap; i >= 0; i--) {
+                if (i - num >= 0) {
+                    dp[i] = dp[i] || dp[i - num];
+                }
+            }
+        }
+        return dp[cap];
+    }
+
     public static void main(String[] args) {
-        int[] nums = {1, 2, 4, 5};
-        System.out.println(canPartition(nums));
+        int[] nums = {3,3,3,4,5};
+        System.out.println(canPartition1(nums));
     }
 }
