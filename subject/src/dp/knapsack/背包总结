@@ -3,8 +3,9 @@
         因为其只会受前一阶段的影响，故只需要保存前一阶段的状态）
         for item in items:
             for i from cap to 0:    //容量必须要从大到小，这样才不会造成 大cap 被 小cap影响
+                //根据具体问题定义
                 if(i>=item.weight){
-                    dp[i] = ...         //根据具体问题定义
+                    dp[i] = ...
                 }
 
         最大价值类0-1背包：判断最大能装多少价值
@@ -72,10 +73,21 @@
             }
             ——时间复杂度O（cap*Σn[i]）
 
-
-
 4.含有负数的背包：
     其实只需要将所有的物品增加一个offset偏移量，使其值变为正即可。
+    注意设置了偏移量后，其初始阶段变为offset-min(sum(cap)),最大阶段变为max(sum(cap))+offset
+    而且还可能由于负数的存在导致不能在原dp数组上从大到小进行状态转移，即使从大到小，小tar仍然会受大tar的影响。
+    因此只能开辟两个数组，一个存储当前dp，一个last存储上一个dp
+        for item in items:
+            int[] dp = new int[n];
+            for i from max(sum(cap))+offset to offset-min(sum(cap)):
+                //根据具体问题定义
+                if(i>=item.weight){
+                    dp[i] = ...
+                }
+            last = dp;
+            }
+        }
 
 5.含有实数的背包：（涉及到精度的问题）
     也很好解决，定义一个误差范围，只要认定小于某一个误差，即可接受。
