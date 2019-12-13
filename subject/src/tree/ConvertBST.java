@@ -22,7 +22,7 @@ public class ConvertBST {
 
     /**
      * 反后序遍历的变形。dfs的返回值、base均代表后序遍历时的右邻节点的值，只是base需要传递
-     * 1.传递右邻节点base值给右子数，计算右子树的累加值rightBase
+     * 1.传递右邻节点base值给右子树，计算右子树的累加值rightBase
      * 2.然后再将右子树的累加值rightBase加到根节点root.val上
      * 3.最后再遍历左子树，传递当前节点的值（root.val）给左子树（左子树的右邻节点是root）。
      *
