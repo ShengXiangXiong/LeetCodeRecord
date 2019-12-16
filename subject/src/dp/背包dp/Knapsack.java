@@ -1,4 +1,4 @@
-package dp.knapsack;
+package dp.背包dp;
 
 /**
  * Knapsack

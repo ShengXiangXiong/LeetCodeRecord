@@ -1,4 +1,4 @@
-package dp.knapsack;
+package dp.背包dp;
 
 /**
  * Created by Xursan on 2019/11/25.
