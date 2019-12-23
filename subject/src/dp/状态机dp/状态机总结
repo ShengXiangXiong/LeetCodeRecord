@@ -1,0 +1,5 @@
+这类Dp实际上算是多维DP问题，即每个阶段有多个状态，大部分这类问题，都是线性DP类。
+
+这类问题，只要准确的定义了状态并根据题目条件画出了状态转移图，基本上就很好解决了。
+
+参考链接：https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/solution/yi-ge-fang-fa-tuan-mie-6-dao-gu-piao-wen-ti-by-lab/
