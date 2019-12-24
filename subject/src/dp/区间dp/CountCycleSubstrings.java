@@ -1,4 +1,4 @@
-package dp;
+package dp.区间dp;
 
 /**
  * Created By ShengXiang.Xiong on 2019/12/9
