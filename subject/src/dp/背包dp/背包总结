@@ -13,10 +13,18 @@
                 dp[i] = max(dp[i],dp[i-item.weight]+item.value)
             }
 
-        装箱类0-1背包：判断是否能装满
-            前置条件dp[0] = true (必须，因为0代表无论如何都可以装满0，而且这也会影响后续的状态)
+        装箱类0-1背包：
+
+            判断是否能装满
+            dp[0] = true (必须，因为0代表无论如何都可以装满0，而且这也会影响后续的状态)
             if(i>=item.weight){
                 dp[i] = dp[i] || dp[i-item.weight]
+            }
+
+            最小装箱数(如零钱兑换)
+            dp[1 to n]= maxValue;（除0外，初始化最大表示为都不能装满或装不下）
+            if(i>=item.weight){
+                dp[i] = min(dp[i-item.weight]+1,dp[i]);
             }
 
 
