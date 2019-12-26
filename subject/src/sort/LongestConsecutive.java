@@ -1,4 +1,4 @@
-package tree;
+package sort;
 
 import java.util.HashMap;
 import java.util.HashSet;
