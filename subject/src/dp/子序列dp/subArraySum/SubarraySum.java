@@ -1,4 +1,4 @@
-package subArraySum;
+package dp.子序列dp.subArraySum;
 
 import java.util.HashMap;
 
