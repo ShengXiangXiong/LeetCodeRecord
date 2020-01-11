@@ -1,4 +1,6 @@
-package dp;
+package DivideAndConquer;
+
+import java.util.HashSet;
 
 /**
  * Created By ShengXiang.Xiong on 2019/12/30
@@ -88,10 +90,64 @@ public class LongestSubstring {
         }
         return e - s + 1;
     }
-    public static void main(String[] args) {
-        String s = "bbaaacbd";
-        int k = 3;
 
-        System.out.println(longestSubstring(s, k));
+    /**
+     * 方法二：按字符种类进行滑动窗口
+     * 我们可以通过枚举子串的不同字母的个数，来使用滑动窗口，因为字母最多是 26 个，这样复杂度就将到 O(n)。
+     * 当子串为只有一个 不同 字母的最长子串，比如 s = "aaabbb", k = 3，结果是 3，因为最长的只含有一个字符的串长度为 3，比如 aaa或者bbb，
+     * 当子串有不同字符有二个呢，结果是 6了
+     * 依次类推。。。
+     */
+    public static int longestSubstring2(String s, int k) {
+        int res = 0;
+        HashSet<Character> set = new HashSet<>();
+        char[] chars = s.toCharArray();
+        for (char aChar : chars) {
+            set.add(aChar);
+        }
+        int sum = set.size();
+        while (sum > 0) {
+            int i = 0, j = 0;
+            int cnt = 0;//当前已加入的不同字符个数
+            int all = 0;//当前已加入大于等于k的不同字符个数
+            int[] c = new int[26];
+            for (char aChar : chars) {
+                j++;
+//                m.put(aChar,m.getOrDefault(aChar,0));
+                int tmp = aChar - 'a';
+                c[tmp]++;
+                if (c[tmp] == k) {
+                    all++;
+                }
+                if (c[tmp] == 1) {
+                    cnt++;
+                }
+                //左边i指针不断收缩
+                while (cnt > sum) {
+                    //如果当前字符是等于k，-1之后则all-1
+                    if (c[chars[i] - 'a'] == k) {
+                        all--;
+                    }
+                    //如果当前字符等于1，则cnt--，表示当前已不包含此字符
+                    if (c[chars[i] - 'a'] == 1) {
+                        cnt--;
+                    }
+                    c[chars[i] - 'a']--;
+                    i++;
+                }
+                if (all == sum) {
+                    res = Math.max(res, j - i);
+                }
+            }
+            sum--;
+        }
+        return res;
+    }
+
+    public static void main(String[] args) {
+        String s = "ababbc";
+        int k = 1;
+
+        System.out.println(longestSubstring2(s, k));
     }
 }
