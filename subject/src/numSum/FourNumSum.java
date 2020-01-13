@@ -1,4 +1,4 @@
-package search.dfs;
+package numSum;
 
 import java.util.*;
 
