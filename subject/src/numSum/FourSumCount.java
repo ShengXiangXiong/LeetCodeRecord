@@ -1,7 +1,6 @@
 package numSum;
 
 import java.util.HashMap;
-import java.util.HashSet;
 
 /**
  * Created By ShengXiang.Xiong on 2020/1/13
@@ -36,13 +35,11 @@ public class FourSumCount {
      */
     public int fourSumCount(int[] A, int[] B, int[] C, int[] D) {
         HashMap<Integer, Integer> countAB = new HashMap<>();
-        HashSet<Integer> s = new HashSet<>();
         int cnt = 0;
         for (int i = 0; i < A.length; i++) {
             for (int j = 0; j < A.length; j++) {
                 int tmp1 = A[i] + B[j];
                 countAB.put(tmp1, countAB.getOrDefault(tmp1, 0) + 1);
-                s.add(tmp1);
             }
         }
         for (int i = 0; i < A.length; i++) {

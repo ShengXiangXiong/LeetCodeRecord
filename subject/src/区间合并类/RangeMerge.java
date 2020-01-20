@@ -1,4 +1,4 @@
-package array;
+package 区间合并类;
 
 import utils.matrixTrans;
 
