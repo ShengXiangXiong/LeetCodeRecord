@@ -1,6 +1,9 @@
 package string;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created by Xursan on 2019/8/7.
@@ -9,7 +12,8 @@ import java.util.*;
  * output [["tea","ate"],["git",""tig],["atb]]
  * 字母相同的放在一组
  *
- * 毫无疑问，应该使用hash表，关键点在于key的构造，方案一：对字符串中的每个字符进行统计构造hashmap => tmp 作为key
+ * 毫无疑问，应该使用hash表，关键点在于key的构造
+ * 方案一：对字符串中的每个字符进行统计构造hashmap => tmp 作为key
  * 方案二：对字符串排序，这样就避免了统计，直接将char[]转换为的String作为key（注意点：不要用数组作为key，因为数组没有
  * 重写HashCode和Equals方法）
  */
