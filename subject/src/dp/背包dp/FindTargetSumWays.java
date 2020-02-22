@@ -165,23 +165,6 @@ public class FindTargetSumWays {
             last = dp;
         }
         return last[S];
-//        int[] dp = new int[2001];
-//        dp[nums[0] + 1000] = 1;
-//        dp[-nums[0] + 1000] += 1;
-//        for (int i = 1; i < nums.length; i++) {
-//            int[] next = new int[2001];
-//            for (int sum = -1000; sum <= 1000; sum++) {
-//                //如果dp[sum + 1000]>0，则一定有sum + nums[i] + 1000 < 2001，因为前面保证过sum和一定小于等于1000
-//                //如果sum和大于1000了，必有dp[sum + 1000]=0；自然跳过这种情况
-//                if (dp[sum + 1000] > 0) {
-//                    next[sum + nums[i] + 1000] += dp[sum + 1000];
-//                    next[sum - nums[i] + 1000] += dp[sum + 1000];
-//                }
-//            }
-//            dp = next;
-//        }
-//        return S > 1000 ? 0 : dp[S + 1000];
-
     }
 
     public static void main(String[] args) {
