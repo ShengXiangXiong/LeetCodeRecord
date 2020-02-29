@@ -1,4 +1,4 @@
-package string;
+package 完全组合类;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
