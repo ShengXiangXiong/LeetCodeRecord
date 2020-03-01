@@ -45,7 +45,6 @@ public class IncreasingTriplet {
         }
         int one = nums[0];
         int two = Integer.MAX_VALUE;
-        ;
         for (int i = 1; i < nums.length; i++) {
             if (nums[i] > two) {
                 return true;

@@ -17,10 +17,16 @@ package dp.状态机dp;
  */
 public class MaxProfit {
     /**
-     * 状态机DP
+     * 状态机DP+跳跃DP
      * 每一天两种状态，未持有0、持有1，然后则有dp[i][0]：第i天未持有股票情况下的最大值，dp[i][1]:第i天持有股票下的最大值
      * 然后通过分析每天的操作（buy-买,sell-卖,fix-不操作）对状态的影响，画状态转移图即可。
-     * 这里需要注意初始值和买卖操作对应的加减情况，买即 -prices[i],卖即 +prices[i],初始未持有一定>=0
+     *
+     * 需要考虑的一点是，冷冻期该如何体现，dp[i][0]显然不会受冷冻期影响    dp[i][0] = max(dp[i-1][0],dp[i-1][1]+nums[i])
+     * 但是dp[i][1]会受冷冻期影响，不考虑冷冻期则为       dp[i][1] = max(dp[i-1][1],dp[i-1][0]-nums[i])
+     * 但如果dp[i-1][0]是由dp[i-2][1]卖出造成的，则dp[i][0]无法使用dp[i-1][0]，若dp[i-1][0]不是由卖出造成的则  dp[i-1][0] = dp[i-2][0]
+     * 显然我们只能考虑dp[i-1][0]不是i-2阶段卖出造成的情况，于是dp[i][1] = max(dp[i-1][1],dp[i-2][0])。
+     *
+     * 另外需要注意初始值和买卖操作对应的加减情况，买即 -prices[i],卖即 +prices[i],初始未持有一定>=0
      *
      * @param prices
      * @return
@@ -29,14 +35,16 @@ public class MaxProfit {
         if (prices.length < 2) {
             return 0;
         }
-        int lastSell = Math.max(prices[1] - prices[0], 0);
-        int lastFix = Math.max(-prices[0], -prices[1]);
-        int last2Sell = 0;
-        for (int i = 2; i < prices.length; i++) {
+        int lastSell = 0;
+        int last2sell = 0;
+        int lastFix = -prices[0];
+        for (int i = 1; i < prices.length; i++) {
             int tmp = lastSell;
+            //卖或继续不持有
             lastSell = Math.max(lastSell, lastFix + prices[i]);
-            lastFix = Math.max(last2Sell - prices[i], lastFix);
-            last2Sell = tmp;
+            //买或继续持有
+            lastFix = Math.max(lastFix, last2sell - prices[i]);
+            last2sell = tmp;
         }
         return lastSell;
     }
@@ -71,7 +79,7 @@ public class MaxProfit {
     }
 
     public static void main(String[] args) {
-        int[] nums = {3, 2};
+        int[] nums = {1, 2, 3, 0, 2};
         System.out.println(maxProfit1(nums));
     }
 }
