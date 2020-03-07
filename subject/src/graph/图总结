@@ -1,0 +1,56 @@
+1、图类题目，一般都离不开求最短路径或最少消耗，但是这类题目都可以通过dijkstra算法或者floyd算法求解
+
+2、为了方便编程，我们一律转变为二维矩阵表示图，其次要注意是无向图还是有向图（无向图记得双重更新）
+
+3、对于floyd算法，实现很简单，三重循环即可：（编程时一定要注意是外层循环中间k）
+    void Floyd()
+    {                          //三重循环
+        for(int k=1;k<=n;k++){ //选中的中间值
+            for(int i=1;i<=n;i++){ //数组横坐标
+                for(int j=1;j<=n;j++){ //数组纵坐标
+                    if(G[i][j]>G[i][k]+G[k][j]){    //如果以k中间点为中间点检测到路径更短
+                        G[i][j]=G[i][k]+G[k][j];    //更新路径值
+                        path[i][j]=k;   //更新要经过的中间点
+                    }
+                }
+            }
+        }
+    }
+
+4、对于dijkstra算法，则相对复杂一点，但我们只要理解到dijkstra的思想，其实很简单：
+    算法步骤：
+        a 从s点出发，每次循环寻找所有可达但还未访问过的点集中，距离其最近的一个作为扩展点，并将其标记为已访问过
+        b 以该扩展点作为中间点，更新其他未访问过的点
+        c 若所有点都已访问过则退出算法
+
+    算法实现：
+        tips：使用vis[]数组记录已访问过的点，使用temp记录扩展点，若不存在可扩展的，则提前终止
+        void dijkstra(int x,int[][] map)
+        {
+        	for(int i=1;i<=n;i++)
+        		dis[i]=map[x][i];
+            //将起点加入已访问集合
+        	vis[x]=true;
+        	//循环，直到所有点已访问过，最多就n个点，所以循环n即可
+        	for(int i=0;i<n;i++)
+        	{
+        	    //寻找距离最近的未访问过的点
+        		int min=INF;
+        		int temp=-1;
+        		for(int j=1;j<=n;j++)
+        			if(!vis[j]&&dis[j]<min)
+        			{
+        				min=dis[j];
+        				temp=j;
+        			}
+
+        		//表示不存在可达点，于是break
+        		if(temp==-1){break;}
+        		//标记为已访问
+        		vis[temp]=true;
+        		//更新
+        		for(int j=1;j<=n;j++)
+        			if(!vis[j]&&dis[temp]+map[temp][j]<dis[j])
+        				dis[j]=dis[temp]+map[temp][j];
+        	}
+        }
